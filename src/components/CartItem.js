@@ -9,11 +9,11 @@ const CartItem = ({id, image, name, color, price, amount}) => {
     const {removeItem, toggleAmount} = useCartContext()
 
     const increase = () => {
-
+        toggleAmount(id, 'inc')
     }
 
     const decrease = () => {
-
+        toggleAmount(id, 'dec')
     }
     return <Wrapper>
         <div className="title">
@@ -29,7 +29,7 @@ const CartItem = ({id, image, name, color, price, amount}) => {
         <h5 className={'price'}>{formatPrice(price)}</h5>
         <AmountButtons amount={amount} increase={increase} decrease={decrease}/>
         <h5 className={'subtotal'}>{formatPrice(price * amount)}</h5>
-        <button className="remove-btn" onClick={()=>removeItem(id)}><FaTrash/></button>
+        <button className="remove-btn" onClick={() => removeItem(id)}><FaTrash/></button>
     </Wrapper>
 }
 
