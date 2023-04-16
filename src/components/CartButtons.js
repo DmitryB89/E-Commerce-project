@@ -1,29 +1,29 @@
 import React from 'react'
-import { FaShoppingCart, FaUserMinus, FaUserPlus } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
+import {FaShoppingCart, FaUserMinus, FaUserPlus} from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
-import { useProductsContext } from '../context/products_context'
-import { useCartContext } from '../context/cart_context'
-import { useUserContext } from '../context/user_context'
+import {useProductsContext} from '../context/products_context'
+import {useCartContext} from '../context/cart_context'
+import {useUserContext} from '../context/user_context'
 
 const CartButtons = () => {
-  const {closeSidebar} = useProductsContext()
-  const {total_items} = useCartContext()
-  return <Wrapper className={'cart-btn-wrapper'}>
-    <Link to={'/cart'} className={'cart-btn'} onClick={closeSidebar}>
-      Cart
-      <span className={'cart-container'}>
+    const {closeSidebar} = useProductsContext()
+    const {total_items} = useCartContext()
+    return <Wrapper className={'cart-btn-wrapper'}>
+        <Link to={'/cart'} className={'cart-btn'} onClick={closeSidebar}>
+            Cart
+            <span className={'cart-container'}>
         <FaShoppingCart/>
         <span className={'cart-value'}>
           {total_items}
         </span>
 
       </span>
-    </Link>
-    <button type={'button'} className="auth-btn">
-      Login <FaUserPlus/>
-    </button>
-  </Wrapper>
+        </Link>
+        <button type={'button'} className="auth-btn">
+            Login <FaUserPlus/>
+        </button>
+    </Wrapper>
 }
 
 const Wrapper = styled.div`
@@ -41,15 +41,18 @@ const Wrapper = styled.div`
 
     align-items: center;
   }
+
   .cart-container {
     display: flex;
     align-items: center;
     position: relative;
+
     svg {
       height: 1.6rem;
       margin-left: 5px;
     }
   }
+
   .cart-value {
     position: absolute;
     top: -10px;
@@ -65,6 +68,7 @@ const Wrapper = styled.div`
     color: var(--clr-white);
     padding: 12px;
   }
+
   .auth-btn {
     display: flex;
     align-items: center;
@@ -74,6 +78,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     color: var(--clr-grey-1);
     letter-spacing: var(--spacing);
+
     svg {
       margin-left: 5px;
     }
