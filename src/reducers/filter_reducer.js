@@ -109,10 +109,3 @@ const filter_reducer = (state, action) => {
 }
 
 export default filter_reducer
-
-// tempProducts.sort((a,b) => b.price - a.price)
-// }
-// throw new Error(`No Matching "${action.type}" - action type`)
-// }
-//
-// export default filter_reducer

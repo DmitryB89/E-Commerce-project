@@ -15,16 +15,16 @@ const Sort = () => {
             </button>
         </div>
         <p>
-            Товаров найдено: {products.length}
+            products found: {products.length}
         </p>
         <hr/>
         <form>
-            <label htmlFor="sort">сортировать по</label>
+            <label htmlFor="sort">sort</label>
             <select name="sort" id="sort" className={'sort-input'} value={sort} onChange={updateSort}>
-                <option value="price-lowest">цена (по возрастанию)</option>
-                <option value="price-highest">цена (по убыванию)</option>
-                <option value="name-a">имя (a–z)</option>
-                <option value="name-z">имя (z–a)</option>
+                <option value="price-lowest">price by highest</option>
+                <option value="price-highest">price by lowest</option>
+                <option value="name-a">name (a–z)</option>
+                <option value="name-z">name (z–a)</option>
             </select>
         </form>
     </Wrapper>

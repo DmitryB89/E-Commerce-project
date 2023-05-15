@@ -24,7 +24,7 @@ const Filters = () => {
                     <input
                         type="text"
                         name={'text'}
-                        placeholder={'поиск'}
+                        placeholder={'search'}
                         className={'search-input'}
                         value={text}
                         onChange={updateFilters}/>
@@ -32,7 +32,7 @@ const Filters = () => {
                 {/*end of search input*/}
                 {/*categories*/}
                 <div className="form-control">
-                    <h5>Категория</h5>
+                    <h5>Category</h5>
                     <div>
                         {categories.map((c, index) => {
                             return <button
@@ -62,7 +62,6 @@ const Filters = () => {
                     <div className="colors">
                         {
                             colors.map((c, index) => {
-                                // Добавляем all
                                 if (c === 'all') {
                                     return <button key={index} name={'color'} onClick={updateFilters} data-color={'all'}
                                                    className={`${color === 'all' ? 'all-btn active' : 'all-btn'}`}>all</button>
@@ -81,13 +80,15 @@ const Filters = () => {
                 <div className="form-control">
                     <h5>price</h5>
                     <p className={'price'}>{formatPrice(price)}</p>
-                    <input type="range" name='price' onChange={updateFilters} min={min_price} max={max_price} value={price}/>
+                    <input type="range" name='price' onChange={updateFilters} min={min_price} max={max_price}
+                           value={price}/>
                 </div>
                 {/*end of price*/}
                 {/*shipping*/}
                 <div className="form-control shipping">
                     <label htmlFor="shipping">free shipping</label>
-                    <input type="checkbox" name={'shipping'} id={'shipping'} onChange={updateFilters} checked={shipping}/>
+                    <input type="checkbox" name={'shipping'} id={'shipping'} onChange={updateFilters}
+                           checked={shipping}/>
                 </div>
 
                 {/*end of shipping*/}

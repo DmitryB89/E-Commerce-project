@@ -10,7 +10,7 @@ const Contact = () => {
           asperiores blanditiis exercitationem facere, in incidunt numquam odio omnis pariatur quam
           ut voluptas voluptates.</p>
         <form className="contact-form">
-          <input type="email" className={'form-input'} placeholder={'enter email'}/>
+          <input type="email" className={'form-input'} placeholder={'enter email'} />
           <button type={'submit'} className={'submit-btn'}>subscribe</button>
         </form>
       </div>
