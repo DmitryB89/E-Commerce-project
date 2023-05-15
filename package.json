@@ -2,7 +2,7 @@
   "name": "comfy",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DmitryB89.github.io/E-Commerce-project",
+  "homepage": ".",
   "dependencies": {
     "@auth0/auth0-react": "^1.12.0",
     "@stripe/react-stripe-js": "^1.14.2",
